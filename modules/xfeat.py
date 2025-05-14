@@ -142,7 +142,7 @@ class XFeat(nn.Module):
 		if not self.kornia_available:
 			raise RuntimeError('We rely on kornia for LightGlue. Install with: pip install kornia')
 		elif self.lighterglue is None:
-			from modules.lighterglue import LighterGlue
+			from .lighterglue import LighterGlue
 			self.lighterglue = LighterGlue()
 
 		data = {
